@@ -1,0 +1,13 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {classifyReceipt,trackTransaction,addressOK,hashOK,sha256} from '../src/chain.js';
+test('accepted is not finalized',()=>{assert.equal(classifyReceipt({status:'ACCEPTED',execution_result:'SUCCESS'}),'accepted');assert.equal(classifyReceipt({status:'FINALIZED',execution_result:'SUCCESS'}),'finalized')});
+test('finalized revert is a failure',()=>assert.equal(classifyReceipt({status:'FINALIZED',execution_result:'ERROR'}),'failed'));
+test('cancelled and undetermined fail',()=>{for(const status of ['CANCELED','UNDETERMINED'])assert.equal(classifyReceipt({status}),'failed')});
+test('pending lifecycle continues through accepted',async()=>{let i=0;const states=[];const client={getTransaction:async()=>({status:['PENDING','ACCEPTED','FINALIZED'][i++],execution_result:'SUCCESS'})};await trackTransaction(client,'0xhash',(s)=>states.push(s),{sleep:async()=>{}});assert.deepEqual(states,['pending','accepted','finalized'])});
+test('execution error rejects even when finalized',async()=>assert.rejects(trackTransaction({getTransaction:async()=>({status:'FINALIZED',execution_result:'ERROR'})},'x',()=>{}),/failed/));
+test('timeout retains pending and advises resume',async()=>assert.rejects(trackTransaction({getTransaction:async()=>({status:'PENDING'})},'x',()=>{},{attempts:1,sleep:async()=>{}}),/Resume tracking/));
+test('transport failure propagates without inventing verdict',async()=>assert.rejects(trackTransaction({getTransaction:async()=>{throw Error('offline')}},'x',()=>{}),/offline/));
+test('input validators',()=>{assert.ok(addressOK('0x'+'a'.repeat(40)));assert.ok(!addressOK('0x123'));assert.ok(hashOK('a'.repeat(64)));assert.ok(!hashOK('A'.repeat(64)))});
+test('SHA-256 matches known UTF-8 vector',async()=>assert.equal(await sha256('abc'),'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad'));
+test('Studio numeric status and array leader receipt',()=>assert.equal(classifyReceipt({status:7,statusName:'FINALIZED',consensus_data:{leader_receipt:[{execution_result:'SUCCESS'}]}}),'finalized'));
+test('finalized without proof of execution stays pending',()=>assert.equal(classifyReceipt({status:'FINALIZED'}),'pending'));

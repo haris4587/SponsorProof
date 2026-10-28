@@ -1,0 +1,8 @@
+{
+  "network": "Studionet",
+  "chainId": 61999,
+  "contract": "0x3Bf1Bfb70c385f7dE54A4D9c3272bFbb8186cEA9",
+  "deploymentTransaction": "0x236af11b5acb5786e04a614f6b328dceb23f283a2ef1f1bee680988330969bb4",
+  "demoCampaign": null,
+  "fixtureCommit": null
+}
