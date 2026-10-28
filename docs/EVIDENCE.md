@@ -30,7 +30,7 @@ The duplicate campaign transaction is an intentional negative test. Its consensu
 
 ## Frontend and local validation
 
-The browser linked the create transaction after checking its signer and decoded calldata. It also linked the second real AI review while in flight and visibly tracked accepted → finalized. Offline tests verify pending, failed, transport-error, and timeout/resume behavior, plus rejection of unrelated or leader-only receipts. The interface uses a manual Studio signing handoff, not direct frontend transaction submission.
+The browser linked the create transaction after checking its signer and decoded calldata. It also linked the second real AI review while in flight and visibly tracked accepted → finalized. The published website also linked the intentional duplicate transaction and displayed it as failed despite its FINALIZED network status. Offline tests verify pending, failed, transport-error, and timeout/resume behavior, plus rejection of unrelated or leader-only receipts. The interface uses a manual Studio signing handoff, not direct frontend transaction submission.
 
 39 offline tests passed, the actual pinned SDK direct smoke passed, GenVM lint and semantic validation passed, and the production build passed. Real AI classifications are verified above; local web and AI mocks are not presented as network consensus evidence.
 

@@ -5,7 +5,7 @@ vm=VMContext()
 url='https://raw.githubusercontent.com/haris4587/SponsorProof/'+'a'*40+'/fixtures/fulfilled.txt'
 text=Path('fixtures/fulfilled.txt').read_bytes()
 with vm.activate():
-    contract=deploy_contract(Path('contracts/sponsorproof.py'),vm)
+    contract=deploy_contract(Path('contracts/sponsorproof.py'),vm,sdk_version='v0.2.16')
     vm.sender=create_address('0x'+'1'*40)
     creator=str(vm.sender)
     print('sender',creator)

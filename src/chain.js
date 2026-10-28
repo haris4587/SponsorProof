@@ -26,7 +26,10 @@ export async function trackTransaction(client, hash, update, {attempts=120, dela
     const receipt = await client.getTransaction({hash});
     const stage = classifyReceipt(receipt);
     update(stage,receipt);
-    if (stage==='failed') throw new Error(`Transaction failed: ${receipt.execution_result || receipt.status}`);
+    if (stage==='failed') {
+      const leader = Array.isArray(receipt.consensus_data?.leader_receipt) ? receipt.consensus_data.leader_receipt[0] : receipt.consensus_data?.leader_receipt;
+      throw new Error(`Transaction failed: ${receipt.txExecutionResultName || receipt.execution_result || leader?.execution_result || receipt.statusName || receipt.status}`);
+    }
     if (stage==='finalized') return receipt;
     await sleep(delay);
   }

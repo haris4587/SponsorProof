@@ -8,3 +8,5 @@
 - Browser QA and live network transaction evidence are recorded in EVIDENCE.md.
 
 Local mocks are intentionally isolated from the real SDK in the unittest process. Direct-mode smoke runs in a fresh Python process. Neither replaces live GenVM/consensus verification. Review outcomes in EVIDENCE.md are factual observations, not promises of AI accuracy.
+
+The direct smoke explicitly selects the public GenVM release `v0.2.16` when loading SDK artifacts. This avoids the test harness auto-selecting an unavailable release candidate. Development dependency security fixes are locked; `npm audit` reported zero vulnerabilities after updating Vite to 7.3.7.
