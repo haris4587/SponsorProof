@@ -1,0 +1,122 @@
+{
+  "agreement_hash": "833f3835610edd00162731ac4c25bff87811ee56d253e39a6e561aef1cb76e59",
+  "approvals": [
+    "0x8be175bb64765b169e91f5f8803d012fa5eb2209",
+    "0xcd1305217298eb7a99696eeab7f5a46b9de2e441"
+  ],
+  "brand": "0xcd1305217298eb7a99696eeab7f5a46b9de2e441",
+  "challenges": [
+    {
+      "by": "0x8be175bb64765b169e91f5f8803d012fa5eb2209",
+      "reason": "Corrected synthetic snapshot now communicates all three required messages.",
+      "review_hash": "3febc004633d6df17233865c41fdffe024930843832ca833daf1c975b90f8afb"
+    }
+  ],
+  "creator": "0x8be175bb64765b169e91f5f8803d012fa5eb2209",
+  "deliveries": [
+    {
+      "sha256": "c18dbca3a0ebdf475f7ee9de99cdd46fc81a91ee480d1e11c25be202bea268e5",
+      "source_url": "https://github.com/haris4587/SponsorProof",
+      "url": "https://raw.githubusercontent.com/haris4587/SponsorProof/8c278e1783bafc0f2c806da3f2c8e75703ee1856/fixtures/partial.txt"
+    },
+    {
+      "sha256": "97d6e5c49cd81a08df33ebbbf4367dd274ba7081af9f539ce89d992f9437e49f",
+      "source_url": "https://github.com/haris4587/SponsorProof",
+      "url": "https://raw.githubusercontent.com/haris4587/SponsorProof/8c278e1783bafc0f2c806da3f2c8e75703ee1856/fixtures/fulfilled.txt"
+    }
+  ],
+  "id": "aster-launch-demo",
+  "requirements": {
+    "disclosure": "#ad",
+    "link": "https://example.com/aster",
+    "messages": [
+      "Keeps drinks cold for 24 hours",
+      "Made from reusable stainless steel",
+      "Has a leak-proof design"
+    ]
+  },
+  "reviews": [
+    {
+      "agreement_hash": "833f3835610edd00162731ac4c25bff87811ee56d253e39a6e561aef1cb76e59",
+      "checks": [
+        {
+          "message": "Exact required link",
+          "quote": "https://example.com/aster",
+          "reason": "Exact whitespace-delimited URL check",
+          "status": "MET"
+        },
+        {
+          "message": "Required disclosure",
+          "quote": "",
+          "reason": "Case-insensitive disclosure with word boundaries",
+          "status": "MET"
+        },
+        {
+          "message": "Keeps drinks cold for 24 hours",
+          "quote": "",
+          "reason": "Evidence explicitly disclaims testing temperature retention; no cold-duration claim is made.",
+          "status": "MISSING"
+        },
+        {
+          "message": "Made from reusable stainless steel",
+          "quote": "The Aster bottle is made from reusable stainless steel.",
+          "reason": "Direct product claim matching the required message.",
+          "status": "MET"
+        },
+        {
+          "message": "Has a leak-proof design",
+          "quote": "",
+          "reason": "Evidence only mentions the seal in a disclaimer about not testing it; no leak-proof design claim is made.",
+          "status": "MISSING"
+        }
+      ],
+      "decision_hash": "3febc004633d6df17233865c41fdffe024930843832ca833daf1c975b90f8afb",
+      "error": "",
+      "evidence_sha256": "c18dbca3a0ebdf475f7ee9de99cdd46fc81a91ee480d1e11c25be202bea268e5",
+      "revision": 1,
+      "verdict": "PARTIAL"
+    },
+    {
+      "agreement_hash": "833f3835610edd00162731ac4c25bff87811ee56d253e39a6e561aef1cb76e59",
+      "checks": [
+        {
+          "message": "Exact required link",
+          "quote": "https://example.com/aster",
+          "reason": "Exact whitespace-delimited URL check",
+          "status": "MET"
+        },
+        {
+          "message": "Required disclosure",
+          "quote": "",
+          "reason": "Case-insensitive disclosure with word boundaries",
+          "status": "MET"
+        },
+        {
+          "message": "Keeps drinks cold for 24 hours",
+          "quote": "keeps drinks cold for 24 hours",
+          "reason": "Exact phrase appears in evidence as a product claim.",
+          "status": "MET"
+        },
+        {
+          "message": "Made from reusable stainless steel",
+          "quote": "made from reusable stainless steel",
+          "reason": "Exact phrase appears in evidence as a product claim.",
+          "status": "MET"
+        },
+        {
+          "message": "Has a leak-proof design",
+          "quote": "has a leak-proof design",
+          "reason": "Exact phrase appears in evidence as a product claim.",
+          "status": "MET"
+        }
+      ],
+      "decision_hash": "785a025ca726214935d518b92cadab0ed5eac548f1cbd8135691c7596f179f9a",
+      "error": "",
+      "evidence_sha256": "97d6e5c49cd81a08df33ebbbf4367dd274ba7081af9f539ce89d992f9437e49f",
+      "revision": 2,
+      "verdict": "FULFILLED"
+    }
+  ],
+  "state": "FINALIZED",
+  "title": "Aster launch · synthetic demo"
+}

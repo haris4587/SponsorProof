@@ -1,0 +1,38 @@
+[
+  {
+    "method": "deploy",
+    "hash": "0x081b826980021321b0cabaed8d2628b5096c52f9577b8a01faeda1f683abe565"
+  },
+  {
+    "method": "create_campaign",
+    "hash": "0x647de9986383029067f44f3d6144210bb501cceb36da5b1bd696d4c1bc040dee"
+  },
+  {
+    "method": "submit_delivery",
+    "hash": "0x1a1dcd04674330b17dc22769659bc1ef404570e1c6d5dfc3130a0ef8f9cfb18a"
+  },
+  {
+    "method": "review_delivery_partial",
+    "hash": "0x9504c8684f0bc23f66b2c96d3e0e47776fcc14473152ccf3150b0e46c8147232"
+  },
+  {
+    "method": "challenge_review",
+    "hash": "0x80241376a928abc0abb3e0b5fde30d0f2d2d115fa827e039a4638d86a67fe15a"
+  },
+  {
+    "method": "review_delivery_fulfilled",
+    "hash": "0x39052264f9cc2463038211ea367578b5b376c0ced3b77a4c13f9bffd88f132f1"
+  },
+  {
+    "method": "finalize_delivery_creator",
+    "hash": "0x3a94d8c57e1a0a105decdd5f34c8dd43596874cf6f7be984d90b0d80afce8d77"
+  },
+  {
+    "method": "finalize_delivery_brand",
+    "hash": "0x3dc4e2550fdc1b682960807ce3612a4aa76f7aa087af734e1a04d44ade14464d"
+  },
+  {
+    "method": "create_campaign_duplicate_expected_failure",
+    "hash": "0xb777b97441f1ad2bbc7d733e09d4d94ffb9470b1614e69d145421ab33fd15aec"
+  }
+]

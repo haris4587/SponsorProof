@@ -1,8 +1,8 @@
 {
   "network": "Studionet",
   "chainId": 61999,
-  "contract": "0x3Bf1Bfb70c385f7dE54A4D9c3272bFbb8186cEA9",
-  "deploymentTransaction": "0x236af11b5acb5786e04a614f6b328dceb23f283a2ef1f1bee680988330969bb4",
-  "demoCampaign": null,
-  "fixtureCommit": null
+  "contract": "0x57Edf2573acFDba8F9D6e712DF12B96A94633236",
+  "deploymentTransaction": "0x081b826980021321b0cabaed8d2628b5096c52f9577b8a01faeda1f683abe565",
+  "demoCampaign": "aster-launch-demo",
+  "fixtureCommit": "8c278e1783bafc0f2c806da3f2c8e75703ee1856"
 }

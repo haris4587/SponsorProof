@@ -1,0 +1,254 @@
+{
+  "verifiedAt": "2026-10-28T08:35:31.500Z",
+  "network": "Studionet",
+  "chainId": 61999,
+  "contract": "0x57Edf2573acFDba8F9D6e712DF12B96A94633236",
+  "sourceSHA256": "877e4c9293be2975c7f0e8ebd6ae3efb731fb31a3aeca1a7f3a0976e6608fac6",
+  "sourceMatchesDeployed": true,
+  "transactions": [
+    {
+      "method": "deploy",
+      "hash": "0x081b826980021321b0cabaed8d2628b5096c52f9577b8a01faeda1f683abe565",
+      "status": "FINALIZED",
+      "stage": "finalized",
+      "execution": "SUCCESS",
+      "returnStatus": "return",
+      "returnData": "null",
+      "from": "0xcD1305217298eB7a99696EEAB7f5a46b9dE2E441",
+      "to": "0x57Edf2573acFDba8F9D6e712DF12B96A94633236",
+      "leaderOnly": false,
+      "executionMode": "NORMAL",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ],
+      "validators": [
+        "0x9C182DE7F93AdbE8ee3D62570613eC23c5683cAc",
+        "0x007d6451555Df7765c707284F844137927aE4e5E",
+        "0x4441Ebe37E72c039B73f1D6CF8C6DEe277FE547a",
+        "0xcab45E3fe9cC9592B5C378E47734E022b7Df80c9",
+        "0x045291B293B9D68969c18B6637A8258038cf787A"
+      ],
+      "transactionURL": "https://explorer-studio.genlayer.com/tx/0x081b826980021321b0cabaed8d2628b5096c52f9577b8a01faeda1f683abe565"
+    },
+    {
+      "method": "create_campaign",
+      "hash": "0x647de9986383029067f44f3d6144210bb501cceb36da5b1bd696d4c1bc040dee",
+      "status": "FINALIZED",
+      "stage": "finalized",
+      "execution": "SUCCESS",
+      "returnStatus": "return",
+      "returnData": "null",
+      "from": "0xcD1305217298eB7a99696EEAB7f5a46b9dE2E441",
+      "to": "0x57Edf2573acFDba8F9D6e712DF12B96A94633236",
+      "leaderOnly": false,
+      "executionMode": "NORMAL",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ],
+      "validators": [
+        "0xb04cdDC4a6Ff6A0aDF715cfe00Fa307b901cebD4",
+        "0xb9ed1258763dfFC83356b15e8A20236B86E42ba2",
+        "0x4441Ebe37E72c039B73f1D6CF8C6DEe277FE547a",
+        "0x045291B293B9D68969c18B6637A8258038cf787A",
+        "0x007d6451555Df7765c707284F844137927aE4e5E"
+      ],
+      "transactionURL": "https://explorer-studio.genlayer.com/tx/0x647de9986383029067f44f3d6144210bb501cceb36da5b1bd696d4c1bc040dee"
+    },
+    {
+      "method": "submit_delivery",
+      "hash": "0x1a1dcd04674330b17dc22769659bc1ef404570e1c6d5dfc3130a0ef8f9cfb18a",
+      "status": "FINALIZED",
+      "stage": "finalized",
+      "execution": "SUCCESS",
+      "returnStatus": "return",
+      "returnData": "null",
+      "from": "0x8BE175bb64765b169e91f5F8803D012Fa5eb2209",
+      "to": "0x57Edf2573acFDba8F9D6e712DF12B96A94633236",
+      "leaderOnly": false,
+      "executionMode": "NORMAL",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ],
+      "validators": [
+        "0xe06A34A1eBd398AF3399d08593B8c3C433CdD947",
+        "0x9C182DE7F93AdbE8ee3D62570613eC23c5683cAc",
+        "0x63d72fE364368491E62a42B9C73c317Ce1ca8434",
+        "0xCe0B66448435cA53665C954705Abd753515594Cf",
+        "0x5847AF34a4e5bA96490f8c883598f68EC9B0B907"
+      ],
+      "transactionURL": "https://explorer-studio.genlayer.com/tx/0x1a1dcd04674330b17dc22769659bc1ef404570e1c6d5dfc3130a0ef8f9cfb18a"
+    },
+    {
+      "method": "review_delivery_partial",
+      "hash": "0x9504c8684f0bc23f66b2c96d3e0e47776fcc14473152ccf3150b0e46c8147232",
+      "status": "FINALIZED",
+      "stage": "finalized",
+      "execution": "SUCCESS",
+      "returnStatus": "return",
+      "returnData": "null",
+      "from": "0x8BE175bb64765b169e91f5F8803D012Fa5eb2209",
+      "to": "0x57Edf2573acFDba8F9D6e712DF12B96A94633236",
+      "leaderOnly": false,
+      "executionMode": "NORMAL",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ],
+      "validators": [
+        "0x378aED3bA912Ce77C3C66155961A7e61C2fE8F3B",
+        "0xB4EE99165ffe987E64B7b72e45a753309c501eef",
+        "0x045291B293B9D68969c18B6637A8258038cf787A",
+        "0x4441Ebe37E72c039B73f1D6CF8C6DEe277FE547a",
+        "0x5e84e17266a193077728229751aC8A1dD24be146"
+      ],
+      "transactionURL": "https://explorer-studio.genlayer.com/tx/0x9504c8684f0bc23f66b2c96d3e0e47776fcc14473152ccf3150b0e46c8147232"
+    },
+    {
+      "method": "challenge_review",
+      "hash": "0x80241376a928abc0abb3e0b5fde30d0f2d2d115fa827e039a4638d86a67fe15a",
+      "status": "FINALIZED",
+      "stage": "finalized",
+      "execution": "SUCCESS",
+      "returnStatus": "return",
+      "returnData": "null",
+      "from": "0x8BE175bb64765b169e91f5F8803D012Fa5eb2209",
+      "to": "0x57Edf2573acFDba8F9D6e712DF12B96A94633236",
+      "leaderOnly": false,
+      "executionMode": "NORMAL",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ],
+      "validators": [
+        "0x5D9Ee6E9aAF2F0b739314A52dd9Da57cd8866dA8",
+        "0x4619C8420D50c9dE477DB2CBb7b4863A041688CB",
+        "0x378aED3bA912Ce77C3C66155961A7e61C2fE8F3B",
+        "0xb04cdDC4a6Ff6A0aDF715cfe00Fa307b901cebD4",
+        "0xcab45E3fe9cC9592B5C378E47734E022b7Df80c9"
+      ],
+      "transactionURL": "https://explorer-studio.genlayer.com/tx/0x80241376a928abc0abb3e0b5fde30d0f2d2d115fa827e039a4638d86a67fe15a"
+    },
+    {
+      "method": "review_delivery_fulfilled",
+      "hash": "0x39052264f9cc2463038211ea367578b5b376c0ced3b77a4c13f9bffd88f132f1",
+      "status": "FINALIZED",
+      "stage": "finalized",
+      "execution": "SUCCESS",
+      "returnStatus": "return",
+      "returnData": "null",
+      "from": "0x8BE175bb64765b169e91f5F8803D012Fa5eb2209",
+      "to": "0x57Edf2573acFDba8F9D6e712DF12B96A94633236",
+      "leaderOnly": false,
+      "executionMode": "NORMAL",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ],
+      "validators": [
+        "0xb9ed1258763dfFC83356b15e8A20236B86E42ba2",
+        "0x9C182DE7F93AdbE8ee3D62570613eC23c5683cAc",
+        "0x336458747913FE397be82c4F0926ACeB3ab13618",
+        "0x0eb3859451817bC25Cc717D4F676D54D0D3aD0aE",
+        "0x4441Ebe37E72c039B73f1D6CF8C6DEe277FE547a"
+      ],
+      "transactionURL": "https://explorer-studio.genlayer.com/tx/0x39052264f9cc2463038211ea367578b5b376c0ced3b77a4c13f9bffd88f132f1"
+    },
+    {
+      "method": "finalize_delivery_creator",
+      "hash": "0x3a94d8c57e1a0a105decdd5f34c8dd43596874cf6f7be984d90b0d80afce8d77",
+      "status": "FINALIZED",
+      "stage": "finalized",
+      "execution": "SUCCESS",
+      "returnStatus": "return",
+      "returnData": "null",
+      "from": "0x8BE175bb64765b169e91f5F8803D012Fa5eb2209",
+      "to": "0x57Edf2573acFDba8F9D6e712DF12B96A94633236",
+      "leaderOnly": false,
+      "executionMode": "NORMAL",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ],
+      "validators": [
+        "0xe06A34A1eBd398AF3399d08593B8c3C433CdD947",
+        "0xCe0B66448435cA53665C954705Abd753515594Cf",
+        "0x63d72fE364368491E62a42B9C73c317Ce1ca8434",
+        "0x045291B293B9D68969c18B6637A8258038cf787A",
+        "0xb9ed1258763dfFC83356b15e8A20236B86E42ba2"
+      ],
+      "transactionURL": "https://explorer-studio.genlayer.com/tx/0x3a94d8c57e1a0a105decdd5f34c8dd43596874cf6f7be984d90b0d80afce8d77"
+    },
+    {
+      "method": "finalize_delivery_brand",
+      "hash": "0x3dc4e2550fdc1b682960807ce3612a4aa76f7aa087af734e1a04d44ade14464d",
+      "status": "FINALIZED",
+      "stage": "finalized",
+      "execution": "SUCCESS",
+      "returnStatus": "return",
+      "returnData": "null",
+      "from": "0xcD1305217298eB7a99696EEAB7f5a46b9dE2E441",
+      "to": "0x57Edf2573acFDba8F9D6e712DF12B96A94633236",
+      "leaderOnly": false,
+      "executionMode": "NORMAL",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ],
+      "validators": [
+        "0xb04cdDC4a6Ff6A0aDF715cfe00Fa307b901cebD4",
+        "0x63d72fE364368491E62a42B9C73c317Ce1ca8434",
+        "0x5847AF34a4e5bA96490f8c883598f68EC9B0B907",
+        "0x378aED3bA912Ce77C3C66155961A7e61C2fE8F3B",
+        "0x4619C8420D50c9dE477DB2CBb7b4863A041688CB"
+      ],
+      "transactionURL": "https://explorer-studio.genlayer.com/tx/0x3dc4e2550fdc1b682960807ce3612a4aa76f7aa087af734e1a04d44ade14464d"
+    },
+    {
+      "method": "create_campaign_duplicate_expected_failure",
+      "hash": "0xb777b97441f1ad2bbc7d733e09d4d94ffb9470b1614e69d145421ab33fd15aec",
+      "status": "FINALIZED",
+      "stage": "failed",
+      "execution": "ERROR",
+      "returnStatus": "rollback",
+      "from": "0xcD1305217298eB7a99696EEAB7f5a46b9dE2E441",
+      "to": "0x57Edf2573acFDba8F9D6e712DF12B96A94633236",
+      "leaderOnly": false,
+      "executionMode": "NORMAL",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ],
+      "transactionURL": "https://explorer-studio.genlayer.com/tx/0xb777b97441f1ad2bbc7d733e09d4d94ffb9470b1614e69d145421ab33fd15aec"
+    }
+  ]
+}

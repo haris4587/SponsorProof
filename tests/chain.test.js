@@ -11,3 +11,8 @@ test('input validators',()=>{assert.ok(addressOK('0x'+'a'.repeat(40)));assert.ok
 test('SHA-256 matches known UTF-8 vector',async()=>assert.equal(await sha256('abc'),'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad'));
 test('Studio numeric status and array leader receipt',()=>assert.equal(classifyReceipt({status:7,statusName:'FINALIZED',consensus_data:{leader_receipt:[{execution_result:'SUCCESS'}]}}),'finalized'));
 test('finalized without proof of execution stays pending',()=>assert.equal(classifyReceipt({status:'FINALIZED'}),'pending'));
+import {validateLinkedTransaction} from '../src/chain.js';import {abi} from 'genlayer-js';
+const plan={contract:'0x'+'1'.repeat(40),account:'0x'+'2'.repeat(40),method:'review_delivery',args:['demo']};
+const linked=()=>({to_address:plan.contract,from_address:plan.account,data:{calldata:{raw:[...abi.calldata.encode({method:plan.method,args:plan.args})]}},leader_only:false,execution_mode:'normal'});
+test('Studio linked receipt matches prepared action',()=>assert.ok(validateLinkedTransaction(linked(),plan,abi.calldata.decode)));
+test('unrelated receipt cannot verify a prepared action',()=>{for(const changed of [{to_address:'0x'+'3'.repeat(40)},{from_address:'0x'+'3'.repeat(40)},{leader_only:true},{data:{calldata:{raw:[...abi.calldata.encode({method:'other',args:[]})]}}}])assert.throws(()=>validateLinkedTransaction({...linked(),...changed},plan,abi.calldata.decode))});

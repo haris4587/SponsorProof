@@ -32,7 +32,7 @@ def snapshot_url(url):
 
 def validate_assessment(raw, messages, text):
     """Model output cannot choose the aggregate verdict or supply invented quotes."""
-    result = json.loads(raw)
+    result = raw if isinstance(raw, dict) else json.loads(raw)
     checks = result.get('checks')
     if not isinstance(checks, list) or len(checks) != len(messages):
         raise gl.vm.UserError('Invalid assessment count')
@@ -142,7 +142,7 @@ class SponsorProof(gl.Contract):
         def fetch():
             try:
                 response = gl.nondet.web.get(url)
-                if response.status_code != 200:
+                if response.status != 200:
                     return {'ok': False, 'error': 'HTTP error'}
                 body = response.body
                 if len(body) > 16000:
@@ -177,7 +177,7 @@ class SponsorProof(gl.Contract):
                           'If ambiguous use UNCERTAIN. Return only JSON: {"checks":[{"status":"MET|MISSING|UNCERTAIN","quote":"literal substring or empty","reason":"brief explanation"}]}. '
                           'Exactly one check per message in order. MET requires a literal quote. '
                           + encode({'messages': messages, 'evidence': text}))
-                raw = gl.nondet.exec_prompt(prompt)
+                raw = gl.nondet.exec_prompt(prompt, response_format='json')
                 return validate_assessment(raw, messages, text)
             semantic = gl.eq_principle.prompt_comparative(assess, principle='Each ordered status must match exactly. Quotes must support the same message and material conclusions must agree. Reasons may be paraphrased.')
             checks.extend(semantic)

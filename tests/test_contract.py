@@ -22,10 +22,10 @@ class ContractTests(unittest.TestCase):
         gl.message.sender_address=B
         self.c=m.SponsorProof(); self.c.campaigns={}; self.c.campaign_ids=[]
         self.body=TEXT.encode(); self.status=200; self.semantic=['MET']*3
-        gl.nondet=NS(web=NS(get=lambda url:NS(body=self.body,status_code=self.status)),exec_prompt=self.prompt)
+        gl.nondet=NS(web=NS(get=lambda url:NS(body=self.body,status=self.status)),exec_prompt=self.prompt)
         gl.eq_principle=NS(strict_eq=lambda f:f(),prompt_comparative=lambda f,**kw:f())
         self.c.create_campaign('test-001','Aster launch',C,json.dumps(REQ))
-    def prompt(self,prompt):
+    def prompt(self,prompt,**kwargs):
         return json.dumps({'checks':[{'status':s,'quote':'Aster' if s=='MET' else '', 'reason':'Supported' if s=='MET' else 'Not supported'} for s in self.semantic]})
     def submit(self, sha=None):
         gl.message.sender_address=C
